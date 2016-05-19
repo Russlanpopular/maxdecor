@@ -15,13 +15,27 @@
 	<meta content="" property="og:site_name" />
 	<meta content="website" property="og:type" />
 
-	<meta content="telephone=no" name="format-detection" />
-	<meta http-equiv="x-rim-auto-match" content="none">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 	
 		<!-- Plugins CSS -->
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.2.min.css" />
@@ -40,7 +54,18 @@
 	
 	 <link rel="stylesheet" href="libs/player/css/normalize.css">
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="libs/player/css/style.css">	
+    <link rel="stylesheet" href="libs/player/css/style.css">
+    
+    	<script>
+        window.onload = function(){
+            document.getElementById('callMe').onclick = function(){
+            document.getElementById('modal-12').style.display = 'block';
+            }
+             document.getElementById('close').onclick = function(){
+                 document.getElementById('modal-12').style.display = 'none';
+             }
+        }
+        </script>	
 	
 	
 </head>
@@ -48,7 +73,7 @@
 	<header>
 		<div class="contacts">
 		    <div class="phone">+7 920 657 0507</div>
-		    <a href="#"><h3 class="call-me fancybix">Заказать звонок</h3></a>
+		    <h3 class="call-me fancybix" id="callMe">Заказать звонок</h3>
 		</div>
 		<div class="container">
 		    <div class="row">
@@ -60,6 +85,31 @@
 		    </div>
 		</div>
 	</header>
+	 <div id="content">
+
+  <section class="row">
+      <div class="modal-overlay" style="display: none;" id="modal-12" >
+          <div class="callback">
+              <div class="close-form" id="close">X</div>
+						<h2>Оставьте Ваш номер</h2>
+						<p>и в ближашее время мы Вам перезвоним</p>
+						<form class="form-callback" method="post">
+						
+                            <!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="maxdecor-slova.fortemax.ru">
+                            <input type="hidden" name="admin_email" value="decor@fortemax.ru">
+                            <input type="hidden" name="form_subject" value="Заказать звонок">
+                            <!-- END Hidden Required Fields -->
+                            
+							<input type="text" name="Имя" required="" placeholder="Ваше имя*">
+							<input type="text" name="Телефон" required="" placeholder="Ваш телефон*" pattern="/d+">
+
+							<button type="submit">Заказать звонок</button>
+						</form>
+            </div>
+        </div>
+      </div>
+  </section>
 	<section class="special">
 		<div class="container">
 			<div class="row">
@@ -105,12 +155,18 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="callback">
-						<h2>Оставте заявку</h2>
+						<h2>Оставьте заявку</h2>
 						<p>и получите бесплатно<br>макет Вашего будущего<br>изделия</p>
-						<form>
-							<input type="text" name="name" required="" placeholder="Ваше имя*">
-							<input type="text" name="phone" required="" placeholder="Ваш телефон*">
-							<input type="text" name="town" required="" placeholder="Ваш город*">
+						<form class="form-callback" method="post">
+						<!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="maxdecor-slova.fortemax.ru">
+                            <input type="hidden" name="admin_email" value="decor@fortemax.ru">
+                            <input type="hidden" name="form_subject" value="Получить мает">
+                        <!-- END Hidden Required Fields -->
+						
+							<input type="text" name="Имя" required="" placeholder="Ваше имя*">
+							<input type="text" name="Телефон" required="" placeholder="Ваш телефон*" pattern="/d+">
+							<input type="text" name="Город" required="" placeholder="Ваш город*">
 							<button type="submit">Получить макет</button>
 						</form>
 					</div>
@@ -168,19 +224,19 @@
             </div>
             <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/slider/slide_0.jpg" />
+                    <img data-u="image" src="img/slider/slide_0.jpg" alt="slide1"/>
                 </div>
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/slider/slide_1.jpg" />
+                    <img data-u="image" src="img/slider/slide_1.jpg" alt="slide2"/>
                 </div>
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/slider/slide_2.jpg" />
+                    <img data-u="image" src="img/slider/slide_2.jpg" alt="slide3"/>
                 </div>
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/slider/slide_3.jpg" />
+                    <img data-u="image" src="img/slider/slide_3.jpg" alt="slide4"/>
                 </div>
                 <div data-p="225.00" style="display: none;">
-                    <img data-u="image" src="img/slider/slide_4.jpg" />
+                    <img data-u="image" src="img/slider/slide_4.jpg" alt="slide4"/>
                 </div>
                 <a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a>
 
@@ -273,25 +329,64 @@
                     <div class="carousel">
                         <!-- Review Item Start -->
                             <div class="review_item">
-                                   <img src="img/reviews/review_1.jpg" alt="">
+                                  <h4>ОЛЬГА АЛЕШИНА</h4>
+                                  <div class="review_wrap">
+                                       <img src="img/reviews/Olga1.jpg" alt="Olga">
+                                       <div class="text-review">
+                                    Вот такие буковки, дополняющие постер со своими любимками , я получила на прошлой неделе от МахDecor Studio. Легкие и очень аккуратные королевские буквы были выполнены быстро, со всеми моими пожеланиями и, самое главное, покрашены в нужный оттенок )) 
+Поэтому, хочу с радостью порекомендовать вам МахDecor Studio, как Мастеров своего дела!
+                                        </div>                         
+                                      </div>
+                                  <div class="row">
+                                   <div class="col-md-12">
+                                       <div class="photo_review">
+                                           <img src="img/reviews/olga1.1.jpg" alt="Olga1.1">
+                                        </div>
+                                   </div>
+                                    
+                                </div>
+                                </div>   
+                            <!-- Review Item End --> 
+                              <!-- Review Item Start -->
+                            <div class="review_item">
+                                  <h4>ОЛЬГА</h4>
+                                  <div class="review_wrap">
+                                       <img src="img/reviews/Olga2.jpg" alt="Olga">
+                                       <div class="text-review">
+                                    Несмотря на то, что отмечали первый день рождения дочери в декабре, рамки радуют нас и по сей день! Они настолько качественно сделаны, что все попытки маленькой хулиганки внести свой вклад в их оформление (разбить стекла, оставить вмятины от зубов) не увенчались успехом. Рамка "Наша малышка" в розовых тонах очень красиво обрамлена кружевом. Смотрится невероятно нежно. В общем, мы очень довольны и обратимся сюда ещё неоднократно!
+                                        </div>                         
+                                      </div>
+                                  <div class="row">
+                                   <div class="col-md-12">
+                                       <div class="photo_review">
+                                           <img src="img/reviews/review_olga2.jpg" alt="Olga2">
+                                        </div>
+                                   </div>
+                                </div>
+                                </div>   
+                            <!-- Review Item End --> 
+                             
+                              <!-- Review Item Start -->
+                            <div class="review_item">
+                                  <h4>ЯНА БАЗАРКИНА</h4>
+                                  <div class="review_wrap">
+                                       <img src="img/reviews/Yana.jpg" alt="Olga">
+                                       <div class="text-review">
+                                    В 2 года и 3 месяца Дэни сильно увлёкся буквами и буквально за неделю запомнил весь алфавит! Сейчас ему уже 2 года и 5 месяцев, но любовь к буквам не отпускает... Деревянный алфавит - одна из любимых игрушек Даниэля! Очень клевые буковки получились!
+                                        </div>                         
+                                      </div>
+                                  <div class="row">
+                                   <div class="col-md-12">
+                                       <div class="photo_review">
+                                           <img src="img/reviews/yana1.jpg" alt="Olga1.1">
+                                        </div>
+                                   </div>
+                                    
+                                </div>
                                 </div>   
                             <!-- Review Item End --> 
 
-                             <!-- Review Item Start -->
-                            <div class="review_item">
-                                   <img src="img/reviews/review_2.png" alt="">
-                                </div>   
-                            <!-- Review Item End --> 
-                             <!-- Review Item Start -->
-                            <div class="review_item">
-                                   <img src="img/reviews/review_3.jpg" alt="">
-                                </div>   
-                            <!-- Review Item End --> 
-                             <!-- Review Item Start -->
-                            <div class="review_item">
-                                   <img src="img/reviews/review_4.png" alt="">
-                                </div>   
-                            <!-- Review Item End --> 
+                             
                     </div>
                 </div>
             </div>
@@ -301,7 +396,7 @@
   <div id="videoContainer">
 
 			<!-- Video -->
-		     <video id="video">
+		     <video id="video" style="cursor: pointer;">
 		        <source src="video/video.mp4" type="video/mp4">
 		        <source src="video/video.ogg" type="video/ogg">      
 		        <track label="English" kind="subtitles" srclang="en" src="video/captions.vtt" default>
@@ -315,7 +410,7 @@
 			<div id="videoControls">
 				<input type="range" id="progressBar" value="0">
 				<span id="progress"></span>	
-					<div id="buttonControls">	
+					<div id="buttonControls" style="position: relative; bottom: 50px;">	
 					    <button id="play"><img id="playImg" src="icons/play-icon.png" alt="The play icon"></button>
 					    <span id="duration">00:00 / 01:00</span>			    			    
 					    <button id="fullScreen"><img id="fullScreenImg" src="icons/fullscreen-icon.png" alt="The fullscreen icon"></button>
@@ -329,18 +424,16 @@
 	<section class="social">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-				<div class="col-md-2"></div>
-					<div class="col-md-5">
+					<div class="col-md-6">
 					<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
 
 					<!-- VK Widget -->
 					<div id="vk_groups"></div>
 					<script type="text/javascript">
-					VK.Widgets.Group("vk_groups", {mode: 0, width: "350", height: "450", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 83363233);
+					VK.Widgets.Group("vk_groups", {mode: 0, width: "400", height: "450", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 83363233);
 					</script>
 					</div>
-				<div class="col-md-5 vidget">
+				<div class="col-md-6 vidget">
 					<div id="fb-root"></div>
 					<script>(function(d, s, id) {
 					  var js, fjs = d.getElementsByTagName(s)[0];
@@ -352,36 +445,57 @@
 
 					<div class="fb-page" data-href="https://www.facebook.com/MaxDecor-Studio-&#x421;&#x43b;&#x43e;&#x432;&#x430;-&#x431;&#x443;&#x43a;&#x432;&#x44b;-&#x444;&#x43e;&#x442;&#x43e;&#x440;&#x430;&#x43c;&#x43a;&#x438;-&#x438;&#x437;-&#x434;&#x435;&#x440;&#x435;&#x432;&#x430;-251047461913920/" data-tabs="timeline" data-width="400" data-height="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
 				</div>
-			</div>
+			
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<h2>Дарите слова - получайте эмоции</h2>
+			<h2>Дарите слова - получайте эмоции  :-)</h2>
 		</div>		
 	</div>
 	</section>
+	
+	
 	<footer>
-	<div class="container">
-		<div class="row">
-			<form>
-			<div class="col-lg-3 col-md-12 col-sm-12">
-                <input type="text" name="name" required="" placeholder="Ваше имя*">
-			</div>
-			<div class="col-lg-3 col-md-12 col-sm-12">
-			    <input type="text" name="phone" required="" placeholder="Ваш телефон*">
-			</div>
-			<div class="col-lg-3 col-md-12 col-sm-12">
-			    <input type="text" name="town" required="" placeholder="Ваш город*">
-			</div>
-			<div class="col-lg-3 col-md-12 col-sm-12">
+        <div class="form-wrap">
+            <form class="form-callback" method="post">
+			<!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="maxdecor-slova.fortemax.ru">
+                            <input type="hidden" name="admin_email" value="decor@fortemax.ru">
+                            <input type="hidden" name="form_subject" value="Получить макет">
+            <!-- END Hidden Required Fields -->
+			
+                <input type="text" name="Имя" required="" placeholder="Ваше имя*">
+			
+			    <input type="text" name="Телефон" required="" placeholder="Ваш телефон*" pattern="/d+">
+		
+			    <input type="text" name="Город" required="" placeholder="Ваш город*">
+		
 			    <button type="submit">Получить макет</button>
-			</div>
 			</form>
-		</div>
-	</div>
+        </div>
+        <div class="form-wrap-bottom">
+            <div class="col-lg-3 middle">
+            <img src="img/maxdecor.png" alt="maxdecor">
+        </div>
+        <div class="col-lg-5">
+            <div class="element middle"><img src="img/skype.png" alt="skype">MaxDecor Studio</div>
+            <div class="element middle"><img src="img/mail.png" alt="mail">decor@fortemax.ru</div>
+            <div class="middle">Москва, 2-й проезд Марьиной Рощи, 21/23</div>
+        </div>
+        <div class="col-lg-4">
+          <div class="bottom-address middle">
+               Звоните, и мы ответим на все вопросы<br>
+           <b>+7(920)657-05-07</b> 
+          </div>
+          
+        </div>
+        </div>
+        
+			
+	
 	<div class="mandarin">
-			<a href="http://webstudiomandarin.com/"><img src="img/mandarin1.png" width="185px"></a>
+			<a href="http://webstudiomandarin.com/"><img src="img/mandarin1.png" alt="mandarin"></a>
 		</div>
 	</footer>
 	<div class="hidden"></div>
@@ -408,7 +522,6 @@
        
        
  <script src="libs/player/js/app.js" type="text/javascript" charset="utf-8"></script>
-        
          
     
 	 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
@@ -432,8 +545,30 @@
 
 
  <script type="text/javascript" src="js/slider.js"></script>
+ 
+ 
+ <script>
+     $(document).ready(function() {
 
+            //E-mail Ajax Send
+            $(".form-callback").submit(function() { //Change
+                var th = $(this);
+                $.ajax({
+                    type: "POST",
+                    url: "mail.php", //Change
+                    data: th.serialize()
+                }).done(function() {
+                    alert("Спасибо за заявку!");
+                    setTimeout(function() {
+                        // Done Functions
+                        th.trigger("reset");
+                    }, 1000);
+                });
+                return false;
+            });
 
+        });
+</script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>

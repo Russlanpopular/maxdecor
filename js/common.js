@@ -93,26 +93,6 @@ $(document).ready(function() {
 		return true;
 	}));
 
-	//Ajax Forms
-	//Documentation: http://api.jquery.com/jquery.ajax/
-	$("form").submit(function(e) {
-		var ths = $(this);
-		e.preventDefault;
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize()
-		}).done(function() {
-			alert("Thank You!");
-			setTimeout(function() {
-				var magnificPopup = $.magnificPopup.instance; 
-				magnificPopup.close();
-				ths.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
@@ -151,6 +131,9 @@ $(document).ready(function() {
 
     $(".special img").animated("flipInY", "fadeOut");
     $(".form .callback").animated("zoomIn", "ZoomOut");
+    $(".bestseller").animated("fadeInUp", "fadeOut");
+    $(".h-desc, .s_rewview h2, .create h2").animated("zoomIn", "flipInX");
+
 
 
 

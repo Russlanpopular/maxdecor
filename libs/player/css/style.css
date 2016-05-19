@@ -57,7 +57,7 @@
 #progress {
 	width: 0%;
 	position: absolute;
-	top: -10px;
+	top: -40px;
 	-webkit-appearance: none;
 	background-color: #ff9900;  
 	height: 5px;
@@ -68,7 +68,7 @@
 #progressBar {
 	width: 98.5%;
 	position: absolute;
-	top: -10px;
+	top: -40px;
 	right: 1%;
 	-webkit-appearance: none;
 	background-color: #6d6e6d;  

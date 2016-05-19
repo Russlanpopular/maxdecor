@@ -46,12 +46,11 @@ body {
 header {
     background-image: url(../img/header.jpg);
     background-repeat: no-repeat;
-    height: 830px;
-    background-position: top center;
+    height: 800px;
+    background-position: center center;
     width: 100%;
     background-size: cover;
 }
-
 .contacts {
     text-align: right;
     padding: 53px 85px;
@@ -62,7 +61,7 @@ header {
     font-size: 33px;
     width: 595px;
     font-weight: bolder;
-    margin: 150px auto 0;
+    margin: 190px auto 0;
 }
 
 .contacts .phone{
@@ -153,19 +152,18 @@ form input {
     font-weight: bolder;
 }
 input::-moz-placeholder { color: #cccccc; }
-button{
-	display: block;
-	background-color: #ea3f07;
-	border-radius: 12px;
-	padding: 10px 40px;
-	box-shadow: none;
-	border: 0;
-	color:#fff;
-	font-size: 26px;
-	font-weight: bold;
-	width: 300px;
-	height: 60px;
-
+button {
+    display: block;
+    background-color: #ea3f07;
+    border-radius: 12px;
+    padding: 10px 40px;
+    box-shadow: none;
+    border: 0;
+    color: #fff;
+    font-size: 26px !important;
+    font-weight: bold !important;
+    width: 300px;
+    height: 60px;
 }
 button:hover{
 	background-color: #f64b13;
@@ -286,23 +284,53 @@ button:active{
     background-attachment: fixed;
     min-height: 500px;
 }
+.video{
+    width: 890px;
+    margin: 60px auto 0;
+}
+
 
 .s_rewview h2{
 	margin-top: 100px;
 	color: rgb(255, 255, 255);
 }
-.review_item .image_wrap img {
-    width: 165px;
+.review_wrap img {
+    width: 132px !important;
     height: 165px;
     display: inline-block;
-    border-radius: 50%;
-    border: #585A5B 10px solid;
     transition: all 0.5s;
+    float: left;
+    margin-right: 60px;
+}
+.review_item h4{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+.text-review{
+    text-indent: 16px;
+    width: 90%;
+    text-align: justify;
+}
+.review_wrap{
+    margin-left: 110px;
 }
 
-
 .review_item{
-    margin-left: 30%;
+    padding-bottom: 70px;
+}
+
+.image_wrap{
+    margin-top: 90px;
+}
+.photo_review{
+    margin-top: 35px;
+}
+.photo_review img{
+      width: auto !important;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .owl-nav div {
@@ -313,6 +341,7 @@ button:active{
     position: absolute;
     opacity: 0.5;
     transition: 0.5s ease;
+    margin-top: 220px;
 }
 
 .owl-nav div.owl-next {
@@ -323,6 +352,10 @@ button:active{
 .social{
 	padding-top: 60px;
 }
+
+.social-wrap{
+    margin: 0 auto;
+}
 .social h2{
 	margin-top: 190px;
 	margin-bottom: 15px;
@@ -331,12 +364,16 @@ button:active{
 }
 
 #vk_groups{
-	position: relative;
-	right: 40px;
+	    margin: 0 auto;
+}
+
+.vidget{
+    margin: 0 auto;
+    text-align: center;
 }
 
 footer{
-	height: 160px;
+	height: 300px;
 	background-color: #d9effa; 
 }
 
@@ -348,8 +385,33 @@ footer button{
 	position: relative;
 }
 footer form{
-	margin-top: 60px;
+	padding-top: 60px;
 }
+.form-wrap-bottom{
+    margin-top: 50px !important;
+    margin: 0 auto;
+    width: 1230px;
+    color: #787c7e;
+}
+.form-wrap-bottom .element{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 36px;
+}
+
+.form-wrap-bottom .element img{
+    margin-right: 15px;
+}
+
+.bottom-address{
+    text-align: right;
+}
+
+.form-wrap {
+    margin: 0 auto;
+    width: 1145px;
+}
+
 
 footer input {
     float: left;
@@ -369,6 +431,48 @@ float: right;
     position: relative;
     right: 0%;
     margin-bottom: -84px;
-    bottom: 84px;
+   bottom: 0px;
+}
+.mandarin img{
+    width: 145px;
+}
+
+.modal-overlay {
+    padding-top: 1px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000000;
+    overflow: auto;
+}
+
+
+.modal-overlay .callback {
+    height: 388px;
+}
+.modal-overlay h2{
+    font-size: 35px;
+}
+
+.modal-overlay button{
+   font-size: 23px !important;
+    width: 267px;
+    padding: 0;
+    height: 55px;
+}
+
+.close-form {
+    position: relative;
+    top: -14px;
+    right: -429px;
+    font: bold 15px Arial;
+    cursor: pointer;
+    z-index: 5;
+    font-size: 23px;
+    margin-bottom: -70px;
+    color: #fff;
 }
 

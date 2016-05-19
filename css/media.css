@@ -1,6 +1,14 @@
 /*==========  Desktop First Method  ==========*/
-@media screen and (max-width:1350px) {
+
+
+@media screen and (min-width:1700px) {
+ .contacts {
+    text-align: right;
+    padding: 30px 150px 0;
+    margin-bottom: 75px;
+}
     
+
 }
 
 @media screen and (max-width:1200px) {
@@ -13,19 +21,112 @@
         margin-left: 23%;
     }
     
-    footer input {
-        margin-left: 33%;
+   .form-wrap-bottom .middle{
+        text-align: center !important;
     }
-    footer button{
-        margin-left: 33%;
-        margin-top: 15px;
+    .mandarin {
+        float: right;
+        position: relative;
+        right: 0%;
+        margin-bottom: -84px;
+        bottom: 115px;
     }
     
-    footer{
-        height: 335px;
+    footer {
+        height: 332px;
+        background-color: #d9effa;
+    }
+    
+
+}
+
+@media screen and (max-width:1250px) {
+  .form-wrap-bottom {
+    margin-top: 50px !important;
+    margin: 0 auto;
+    width: 1050px;
+    color: #787c7e;
+}
+    
+
+}
+
+
+
+
+@media screen and (max-width:960px) {
+    
+}
+
+
+@media screen and (max-width:1395px) {
+   footer input {
+        width: 210px;
+    }
+    
+   footer button {
+        width: 230px;
+        font-size: 20px !important;
+        margin: 0px;
+        padding: 0;
+    }
+    
+    .form-wrap {
+        margin: 0 auto;
+        width: 950px;
     }
 
 }
+
+
+@media screen and (max-width:1180px) {
+    
+    footer input {
+        width: 160px;
+        height: 40px;
+    }
+    
+   footer button {
+        width: 180px;
+        font-size: 17px !important;
+        margin: 3px 0 0 0;
+        padding: 0;
+        height: 40px;
+    }
+    
+    .form-wrap {
+        margin: 0 auto;
+        width: 750px;
+    }
+        *::-webkit-input-placeholder {
+        color: #666;
+        opacity: 1;
+        font-size: 15px;
+        }
+        *:-moz-placeholder {
+            color: #666;
+            opacity: 1;
+            font-size: 15px;
+        }
+        *::-moz-placeholder {
+            color: #666;
+            opacity: 1;
+            font-size: 15px;
+        }
+        *:-ms-input-placeholder {
+            color: #666;
+            opacity: 1;
+            font-size: 15px;
+        }
+    
+        .video {
+            width: 600px;
+            margin: 60px auto 0;
+    }
+
+
+}
+
 
 
 
@@ -66,8 +167,28 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-
+@media only screen and (max-width : 970px) {
+    footer{
+           height: 480px;
+        }
+        footer form {
+            padding-top: 25px;
+        }
+        .form-wrap {
+            margin: 0 auto;
+            width: 200px;
+        }
+    footer input {
+        width: 180px;
+        height: 40px;
+    }
+    
+    .form-wrap-bottom {
+        margin-top: 50px !important;
+        margin: 0 auto;
+        width: 550px;
+        color: #787c7e;
+    }
 }
 
 /* Extra Small Devices, Phones */
